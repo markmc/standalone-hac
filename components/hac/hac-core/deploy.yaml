@@ -6,12 +6,12 @@ spec:
   API:
     versions:
       - v1
-  deploymentRepo: 'http://test'
+  deploymentRepo: http://test
   envName: ephem-hac
   frontend:
     paths:
       - /apps/hac-core
-  image: quay.io/cloudservices/hac-core-frontend:8698638
+  image: quay.io/cloudservices/hac-core-frontend:latest
   module:
     manifestLocation: /apps/hac-core/fed-mods.json
     moduleID: hacCore
