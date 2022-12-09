@@ -11,7 +11,7 @@ spec:
 
   source:
     path: argo-cd-apps/overlays/crc
-    repoURL: https://github.com/jduimovich/standalone-hac.git
+    repoURL: https://github.com/markmc/standalone-hac.git
     targetRevision: main
 
   destination:

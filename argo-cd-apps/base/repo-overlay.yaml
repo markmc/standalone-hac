@@ -6,7 +6,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   source:
-    repoURL: https://github.com/jduimovich/standalone-hac.git
+    repoURL: https://github.com/markmc/standalone-hac.git
     targetRevision: main
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -17,7 +17,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   source:
-    repoURL: https://github.com/jduimovich/standalone-hac.git
+    repoURL: https://github.com/markmc/standalone-hac.git
     targetRevision: main
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -28,7 +28,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   source:
-    repoURL: https://github.com/jduimovich/standalone-hac.git
+    repoURL: https://github.com/markmc/standalone-hac.git
     targetRevision: main
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -39,7 +39,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   source:
-    repoURL: https://github.com/jduimovich/standalone-hac.git
+    repoURL: https://github.com/markmc/standalone-hac.git
     targetRevision: main
 
 
