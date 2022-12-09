@@ -7,10 +7,10 @@ spec:
     versions:
       - v1
   assetsPrefix: api/plugins
-  deploymentRepo: 'http://github.com/openshift/hac-infra'
+  deploymentRepo: http://github.com/openshift/hac-infra
   envName: ephem-hac
   frontend:
     paths:
       - /api/plugins/hac-infra
-  image: quay.io/cloudservices/hac-infra-frontend:6923bcf
+  image: quay.io/cloudservices/hac-infra-frontend:latest
   title: hac-infra
