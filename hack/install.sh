@@ -3,7 +3,6 @@ ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"/..
 
 #change these is you feel that you need your clowder and proxy checked out diretories elsewhere
 CLOWDER=$ROOT/../clowder
-PROXY=$ROOT/../crc-k8s-proxy
 
 if [ -d $CLOWDER ]; then
   (cd $CLOWDER; ./build/kube_setup.sh)
@@ -55,17 +54,6 @@ yq '.spec.source.path="'$REPO_PATH'"' $ROOT/argo-cd-apps/app-of-apps/all-applica
 
 kubectl create secret docker-registry redhat-appstudio-staginguser-pull-secret --from-file=.dockerconfigjson="$ROOT/hack/nocommit/quay-io-auth.json" --dry-run=client -o yaml | \
 kubectl apply -f - -n aaaa-studio
- 
- 
-if [ -d $PROXY ]; then
-  (cd $PROXY; bash run-util crc)
-else
-  echo "No proxy found in $PROXY" 
-  echo "git clone  https://github.com/jduimovich/crc-k8s-proxy.git" 
-  echo "into the parent directory ../crc-k8s-proxy"
-  echo "and re-reun this script" 
-  exit 1 
-fi
 
 # switch to the correct single namespace 
 oc project aaaa-studio
